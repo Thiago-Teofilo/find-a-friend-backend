@@ -1,0 +1,9 @@
+{
+  "name": "vitest-environment-mongoose",
+  "version": "1.0.0",
+  "description": "",
+  "main": "mongoose-test-environment.ts",
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}

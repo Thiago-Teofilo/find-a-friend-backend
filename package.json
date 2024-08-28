@@ -1,0 +1,50 @@
+{
+  "name": "find-a-friend-api",
+  "version": "1.0.0",
+  "description": "- [] Deve ser possível cadastrar um pet;\r - [] Deve ser possível listar todos os pets disponíveis para adoção em uma cidade;\r - [] Deve ser possível filtrar pets por suas características;\r - [] Deve ser possível visualizar detalhes de um pet para adoção;\r - [] Deve ser possível se cadastrar como uma ORG;\r - [] Deve ser possível realizar login como uma ORG;",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "tsx watch src/server.ts",
+    "start": "node build/server.js",
+    "test:create-mongoose-environment": "npm link ./src/database/vitest-environment-mongoose",
+    "test:install-mongoose-environment": "npm link vitest-environment-mongoose",
+    "build": "tsup src --out-dir build",
+    "test": "vitest run --dir src/use-cases",
+    "test:watch": "vitest --dir src/use-cases",
+    "pretest:e2e": "run-s test:create-mongoose-environment test:install-mongoose-environment",
+    "test:e2e": "vitest run --dir src/http",
+    "test:e2e:watch": "vitest --dir src/http",
+    "test:coverage": "vitest run --coverage",
+    "test:ui": "vitest --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@rocketseat/eslint-config": "^2.1.0",
+    "@types/bcryptjs": "^2.4.2",
+    "@types/node": "^20.4.8",
+    "@types/supertest": "^2.0.14",
+    "@vitest/coverage-v8": "^0.34.1",
+    "@vitest/ui": "^0.34.1",
+    "eslint": "^8.46.0",
+    "npm-run-all": "^4.1.5",
+    "supertest": "^6.3.3",
+    "tsup": "^7.2.0",
+    "tsx": "^3.12.7",
+    "typescript": "^5.1.6",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.33.0"
+  },
+  "dependencies": {
+    "@fastify/cookie": "^9.3.1",
+    "@fastify/jwt": "^7.2.1",
+    "@vitest/coverage-c8": "^0.33.0",
+    "bcryptjs": "^2.4.3",
+    "dayjs": "^1.11.9",
+    "dotenv": "^16.3.1",
+    "fastify": "^4.21.0",
+    "mongoose": "^8.2.2",
+    "zod": "^3.22.4"
+  }
+}
