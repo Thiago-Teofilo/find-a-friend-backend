@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start:dev": "tsx watch src/server.ts",
-    "start": "node build/server.js",
+    "start": "node dist/server.js",
     "test:create-mongoose-environment": "npm link ./src/database/vitest-environment-mongoose",
     "test:install-mongoose-environment": "npm link vitest-environment-mongoose",
-    "build": "tsup src --out-dir build",
+    "build": "tsup src",
     "test": "vitest run --dir src/use-cases",
     "test:watch": "vitest --dir src/use-cases",
     "pretest:e2e": "run-s test:create-mongoose-environment test:install-mongoose-environment",
